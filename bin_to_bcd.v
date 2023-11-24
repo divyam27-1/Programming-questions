@@ -48,12 +48,13 @@ module bin_to_bcd(
     FA fa2(in[1], six[1], carry[0], out[1], carry[1]);
     FA fa3(in[2], six[2], carry[1], out[2], carry[2]);
     FA fa4(in[3], six[3], carry[2], out[3], out[4]);
-	//Better code:
-	//assign out = in + six;
-    
     assign out[7] = 0;
     assign out[6] = 0;
     assign out[5] = 0;
+	//Better code:
+	//assign out = in + six;
+    
+
      
 endmodule
 
