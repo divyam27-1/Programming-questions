@@ -36,7 +36,8 @@ module bin_to_bcd(
     assign six[3] = 0;
     
     wire [2:0] carry;
-    
+
+	//We dont have to do this bullshit, we can just do in+six
     FA fa1(in[0], six[0], 0, out[0], carry[0]);
     FA fa2(in[1], six[1], carry[0], out[1], carry[1]);
     FA fa3(in[2], six[2], carry[1], out[2], carry[2]);
